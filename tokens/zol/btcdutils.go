@@ -44,7 +44,9 @@ func (b *Bridge) GetChainParams() *chaincfg.Params {
 		params.PubKeyHashAddrID = 0x81
 		return params
 	default:
-		return &chaincfg.TestNet3Params
+		params := &chaincfg.TestNet3Params
+		params.PubKeyHashAddrID = 0x81
+		return params
 	}
 }
 
