@@ -40,7 +40,9 @@ func (b *Bridge) GetChainParams() *chaincfg.Params {
 	networkID := strings.ToLower(b.ChainConfig.NetID)
 	switch networkID {
 	case netMainnet:
-		return &chaincfg.MainNetParams
+		params := &chaincfg.MainNetParams
+		params.PubKeyHashAddrID = 0x81
+		return params
 	default:
 		return &chaincfg.TestNet3Params
 	}

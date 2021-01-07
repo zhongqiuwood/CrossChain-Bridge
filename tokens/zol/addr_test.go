@@ -6,10 +6,10 @@ import (
 	"testing"
 )
 
-func TestBridge_DecodeAddress(t *testing.T) {
+func TestDecodeAddress_SOL(t *testing.T) {
 	b := NewCrossChainBridge(true)
 	b.ChainConfig = &tokens.ChainConfig{
-		BlockChain: "Bitcoin",
+		BlockChain: "ZeroLimit",
 		NetID:      "mainnet",
 	}
 
